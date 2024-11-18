@@ -1,3 +1,5 @@
+package org.factoriaf5;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -74,7 +76,7 @@ public class Example {
 
     public String convertirListaAString(List<String> lista) {
         return lista.stream()
-        .map(s -> s == null ? "NULL" : s.toUpperCase()) // Si es null, lo reemplazamos por "NULL"
+        .map(s -> s == null ? "NULL" : s.toUpperCase()) 
         .collect(Collectors.joining(","));
     }
 }
