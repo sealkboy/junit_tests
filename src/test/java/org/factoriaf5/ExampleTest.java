@@ -13,12 +13,12 @@ public class ExampleTest {
 
     @Test
     public void testSumar() {
-        int num1 = 35;
-        int num2 = 79;
+        int num1 = 50;
+        int num2 = 50;
 
         int result = example.sumar(num1, num2);
 
-        assertEquals(114, result);
+        assertEquals(100, result);
         assertTrue(result > 100);
         assertFalse(result > 120);
         assertNotNull(result);
@@ -26,8 +26,8 @@ public class ExampleTest {
 
     @Test
     public void testCheckPositivo() {
-        int positivo = 10;
-        int negativo = -5;
+        int positivo = 20;
+        int negativo = -4;
 
         assertTrue(example.checkPositivo(positivo));
         assertThrows(IllegalArgumentException.class, () -> example.checkPositivo(negativo));
@@ -35,19 +35,19 @@ public class ExampleTest {
 
     @Test
     public void testContarLetrasA() {
-        String cadena = "abracadabra";
+        String cadena = "portatil";
 
         int count = example.contarLetrasA(cadena);
 
-        assertEquals(5, count);
+        assertEquals(1, count);
         assertTrue(count > 0);
     }
 
     @Test
     public void testContieneElemento() {
-        List<String> lista = Arrays.asList("manzana", "pera", "uva");
-        String elementoPresente = "pera";
-        String elementoAusente = "fresa";
+        List<String> lista = Arrays.asList("godoy", "andoni", "girafales");
+        String elementoPresente = "godoy";
+        String elementoAusente = "chavo";
 
         assertTrue(example.contieneElemento(lista, elementoPresente));
         assertFalse(example.contieneElemento(lista, elementoAusente));
@@ -55,22 +55,22 @@ public class ExampleTest {
 
     @Test
     public void testRevertirCadena() {
-        String cadena = "hola";
+        String cadena = "laura";
 
         String resultado = example.revertirCadena(cadena);
 
-        assertEquals("aloh", resultado);
+        assertEquals("arual", resultado);
         assertNotEquals("hola", resultado);
     }
 
     @Test
     public void testFactorial() {
-        int numero = 5;
+        int numero = 2;
         int negativo = -1;
 
         long factorial = example.factorial(numero);
 
-        assertEquals(120, factorial);
+        assertEquals(2, factorial);
         assertThrows(IllegalArgumentException.class, () -> example.factorial(negativo));
     }
 
@@ -89,7 +89,7 @@ public class ExampleTest {
 
         String mensaje = example.mensajeConRetraso();
 
-        assertEquals("Listo después de retraso", mensaje);
+        assertEquals("Ready:", mensaje);
         assertTrue((System.currentTimeMillis() - startTime) >= 5000);
     }
 
@@ -115,11 +115,11 @@ public class ExampleTest {
 
     @Test
     public void testConvertirListaAString() {
-        List<String> lista = Arrays.asList("manzana", null, "pera");
+        List<String> lista = Arrays.asList("amor", null, "para");
 
         String resultado = example.convertirListaAString(lista);
 
-        assertEquals("MANZANA,NULL,PERA", resultado);
+        assertEquals("AMOR,NULL,PARA", resultado);
         assertNotNull(resultado);
     }
 }
